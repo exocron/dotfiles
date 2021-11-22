@@ -24,3 +24,5 @@ alias dc='docker-compose'
 alias vi='emacs'
 alias vim='emacs'
 alias e='emacs'
+
+if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi # added by Nix installer
