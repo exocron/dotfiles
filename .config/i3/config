@@ -220,3 +220,17 @@ output * bg #000000 solid_color
 
 # Program shortcuts
 bindsym $mod+b exec swaymsg exec firefox
+
+bindsym $mod+z exec swaylock -c "#000000"
+
+# Multi-monitor
+output DP-1 pos 0 0 res 2560x1440
+output eDP-1 pos 2560 0 res 3200x1800
+bindsym $mod+Control+h focus output left
+bindsym $mod+Control+l focus output right
+bindsym $mod+Control+Shift+h move workspace to output left
+bindsym $mod+Control+Shift+l move workspace to output right
+
+# Hack for firefox notifications
+no_focus [app_id="firefox" title="^$"]
+for_window [app_id="firefox" title="^$"] border none, floating enable, move position 79 ppt 88 ppt
